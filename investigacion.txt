@@ -1,0 +1,16 @@
+Cuando se inicia una aplicacion en ANDROID, esta se ejecuta en el hilo principal donde cada accion que el usuario haga, este hilo pasan los procesa.
+En este hilo actuan todos los componentes, pero que para con las operaciones largas como consulta a base de datos a operaciones entre la red y el dispositivo.
+En estos casos la interfaz se ve con un retardo o una reaccion lenta o si las funciones duran mas de 5 segundos se presenta el error de "aplicación no responde (ANR)". Los usuarios dejaran de usar esa aplicacion.
+Para las ejecuciones largas o tareas intensivas de la CPU, hay básicamente dos maneras de hacer esto: los Thread de Java, y AsyncTask nativa de Android.
+Ninguno es mejor que el ortro en terminos de rendimiento pero si en que casos utilizar cada uno:
+AsyncTask:
+- Para operaciones de red simples que no requieren la descarga de una gran cantidad de datos
+- Tareas sobre el almacenamiento del dispositivo que tomen algunos milisegundos
+Threads
+- Las operaciones de red que implican de moderadas a grandes cantidades de datos (ya sea la carga o descarga)
+- Tareas altas del CPU, que necesita que se ejecute en segundo plano
+- Cualquier tarea en la que desea controlar el uso de la CPU en relación con el hilo GUI
+En resumen, se trata de brindar una experiencia lo mas fluidamente posible y como desarrolladores se puede lograr con metodo como: Thread y Asynctask
+
+Estudiantes:	Carlos Jimenez Gonzalez
+		Yorbi Mendez Soto
